@@ -1,3 +1,37 @@
 ### root api endpoint
 
 GET http://localhost:8000
+
+
+### get task
+GET http://localhost:8000/api/v1/tasks
+
+### post task
+POST http://localhost:8000/api/v1/tasks
+Content-Type: application/json
+
+{
+    "task" : "teaching",
+    "hr" : 15
+}
+
+
+### update task
+PATCH http://localhost:8000/api/v1/tasks
+
+//delete single task
+# ### post task
+# DELETE http://localhost:8000/api/v1/tasks/628068548d6b66c35a8249c5
+
+//delete multiple
+### post task
+DELETE http://localhost:8000/api/v1/tasks/
+Content-Type: application/json
+
+{
+   "ids" : [
+       "6280507d1aa464f955d558f1",
+       "6280647001a2d05d4aa610cc",
+       "62806486b4e85f40ad30faa3"
+   ]
+}
